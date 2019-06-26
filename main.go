@@ -86,7 +86,7 @@ func (b *Batcher) send(toAddress string, value float64) {
 		}
 		toAddress = b.tokenAddress
 		amount = big.NewInt(0)
-		fmt.Printf("Transaction data is %s \n", data)
+		fmt.Printf("Transaction data is %X \n", data)
 	} else {
 		tmp := big.NewFloat(b.value)
 		tmp.Mul(tmp, big.NewFloat(1000000000000000000))
@@ -96,7 +96,7 @@ func (b *Batcher) send(toAddress string, value float64) {
 			tmp.Mul(tmp, big.NewFloat(1000000000000000000))
 			amount, _ = tmp.Int(nil)
 		}
-		fmt.Printf("Transaction data is %s \n", data)
+		fmt.Printf("Transaction data is %X \n", data)
 	}
 
 	tx := types.NewTransaction(b.nonce, common.HexToAddress(toAddress), amount, b.gasLimit, b.gasPrice, data)
