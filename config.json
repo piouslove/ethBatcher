@@ -1,0 +1,9 @@
+{
+	"privateKey": "3D88A9C20AF778E470D15D0F35D5618D3985F8D589202678B4A72269B77C736F",
+	"value": 0,
+	"rpcURL": "https://ropsten.infura.io",
+	"mysqlURL": "127.0.0.1:3306",
+	"mysqlUser": "root",
+	"mysqlPassword": "",
+	"tokenAddress": "0x0"
+}
